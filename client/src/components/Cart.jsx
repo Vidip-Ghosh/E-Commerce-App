@@ -13,7 +13,7 @@ const Cart = () => {
 
   // payment integration
   const makePayment = async () => {
-    const stripe = await loadStripe("your_stripe_public_key_here");
+    const stripe = await loadStripe(import.meta.env.VITE_PRIMARY_KEY);
     const body = {
       products: products
     };
